@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <i> the longest tweet was posted by </i> <strong>@{{ user }} </strong><i> using displayname </i> <strong>{{ displayname }} </strong></li>:
+  <br></br>
+  <br>" {{ text }} "</br>
+</div>
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong> ~~~~ {{message}} ~~~ </strong>
+{% endfor %}
+</div>
+
+{% endblock %}
